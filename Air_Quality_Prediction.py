@@ -63,7 +63,7 @@ def gradient_descent(x,y,learning_rate = 0.001,batch_size = 1):
         grad = gradient(theta,x,y)
         for j in range(x.shape[1]):
             theta[j] -= learning_rate*grad[j]
-            error_rate.append(error_function(theta,x,y))
+        error_rate.append(error_function(theta,x,y))
     return theta,error_rate
 
 def y_predict(x,theta):
